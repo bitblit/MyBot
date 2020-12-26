@@ -1,0 +1,79 @@
+{
+  "name": "@bitblit/mybot",
+  "version": "0.8.1",
+  "description": "My node robot",
+  "main": "./dist/index",
+  "typings": "./dist/index",
+  "files": [
+    "dist"
+  ],
+  "contributors": [
+    "Christopher Weiss <bitblit@gmail.com>"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 140,
+    "singleQuote": true,
+    "arrowParens": "always"
+  },
+  "config": {},
+  "scripts": {
+    "prepublishOnly": "yarn run compile",
+    "compile": "yarn run clean && tsc",
+    "watch": "tsc-watch",
+    "clean": "shx rm -Rf dist",
+    "test": "mocha -r ts-node/register test/**/*.ts",
+    "apply-circle": "node dist/circleci/apply-circle-ci-env-variables-to-files src/static/build-properties.json",
+    "lint": "eslint src/**/*.ts",
+    "lint-fix": "eslint --fix src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitblit/MyBot"
+  },
+  "keywords": [
+    "wrench",
+    "utility"
+  ],
+  "bugs": {
+    "url": "https://github.com/bitblit/MyBot/issues"
+  },
+  "homepage": "https://github.com/bitblit/MyBot#readme",
+  "engines": {
+    "node": ">=12.8"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "moment": "2.26.0",
+    "moment-timezone": "0.5.31",
+    "@bitblit/ratchet": "0.9.17",
+    "pigpio": "3.2.4"
+  },
+  "devDependencies": {
+    "@types/chai": "4.2.11",
+    "@types/mocha": "7.0.2",
+    "@types/node": "12.12.6",
+    "@types/pigpio": "1.2.2",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "4.2.5",
+    "mocha": "7.2.0",
+    "portable-fetch": "3.0.0",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1",
+    "rxjs": "6.5.5",
+    "shx": "0.3.2",
+    "tmp": "0.2.1",
+    "ts-node": "8.10.2",
+    "tsc-watch": "4.2.8",
+    "typescript": "3.9.5"
+  }
+}
