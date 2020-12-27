@@ -14,6 +14,8 @@ Code for my robot in Typescript
 * sudo apt-get install pigpio
   --- Note: Dont start the daemon, Node will interface directly
 
+- Working thru stuff from : https://github.com/fivdi/pigpio#installation
+
 ## Usage
 
 TBD
