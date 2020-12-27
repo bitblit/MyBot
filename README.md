@@ -6,6 +6,14 @@ Code for my robot in Typescript
 
 `npm install @bitblit/mybot`
 
+## Setup
+
+- Install pigpio C library on the Pi
+
+* sudo apt-get update
+* sudo apt-get install pigpio
+  --- Note: Dont start the daemon, Node will interface directly
+
 ## Usage
 
 TBD
