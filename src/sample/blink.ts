@@ -2,8 +2,6 @@
 import { Gpio } from 'pigpio';
 import { PromiseRatchet } from '@bitblit/ratchet/dist/common/promise-ratchet';
 
-// const Gpio = require('pigpio').Gpio;
-
 export class Blink {
   private led: Gpio = new Gpio(4, { mode: Gpio.OUTPUT });
 

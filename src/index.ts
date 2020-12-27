@@ -2,12 +2,17 @@
  * Just a util at this point
  *
  **/
-import { Blink } from './blink/blink';
 import { Logger } from '@bitblit/ratchet/dist/common/logger';
+import { LedButton } from './sample/led-button';
+import { PromiseRatchet } from '@bitblit/ratchet/dist/common/promise-ratchet';
 
 async function tester(): Promise<void> {
-  const b: Blink = new Blink();
-  await b.run();
+  const b: LedButton = new LedButton();
+
+  while (true) {
+    Logger.info('Wait');
+    await PromiseRatchet.wait(5000);
+  }
 }
 
 tester()
