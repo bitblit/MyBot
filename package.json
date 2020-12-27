@@ -23,7 +23,8 @@
   "config": {},
   "scripts": {
     "prepublishOnly": "yarn run compile",
-    "compile": "yarn run clean && tsc",
+    "compile": "tsc",
+    "clean-compile": "yarn run clean && yarn run compile",
     "watch": "tsc-watch",
     "clean": "shx rm -Rf dist",
     "test": "mocha -r ts-node/register test/**/*.ts",
