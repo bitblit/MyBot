@@ -6,9 +6,10 @@ import { Logger } from '@bitblit/ratchet/dist/common/logger';
 import { LedButton } from './sample/led-button';
 import { PromiseRatchet } from '@bitblit/ratchet/dist/common/promise-ratchet';
 import { Servo1 } from './sample/servo1';
+import { SoundSensor } from './sample/sound-sensor';
 
 async function tester(): Promise<void> {
-  const b: Servo1 = new Servo1();
+  const b: SoundSensor = new SoundSensor();
 
   await b.run();
   /*
