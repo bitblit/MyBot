@@ -29,7 +29,8 @@ export class SoundSensor2 {
     // Trigger a distance measurement once per second
     while (true) {
       const value: number = this.sensor.getPwmFrequency();
-      this.sensor.Logger.info('Freq: %s', value);
+      Logger.info('Freq: %s', value);
+      //this.sensor.
       await PromiseRatchet.wait(1000);
     }
   }
