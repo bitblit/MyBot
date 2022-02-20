@@ -16,6 +16,11 @@ Code for my robot in Typescript
 
 - Working thru stuff from : https://github.com/fivdi/pigpio#installation
 
+## Digital / Analog stuff
+
+- PI can handle analog out using pulse width modulation
+- Can't really do analog IN without weird stuff like timing the die-out of a charge in a capacitor
+
 ## Usage
 
 TBD
