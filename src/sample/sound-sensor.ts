@@ -4,7 +4,7 @@ import { PromiseRatchet } from '@bitblit/ratchet/dist/common/promise-ratchet';
 
 export class SoundSensor {
   // The number of microseconds it takes sound to travel 1cm at 20 degrees celcius
-  public static readonly MICROSECDONDS_PER_CM: number = 1e6 / 34321;
+  public static readonly MICROSECONDS_PER_CM: number = 1e6 / 34321;
 
   private trigger = new Gpio(23, { mode: Gpio.OUTPUT });
   private echo = new Gpio(24, { mode: Gpio.INPUT, alert: true });
@@ -19,7 +19,7 @@ export class SoundSensor {
       } else {
         const endTick = tick;
         const diff = (endTick >> 0) - (this.startTick >> 0); // Unsigned 32 bit arithmetic
-        Logger.info('%s', diff / 2 / SoundSensor.MICROSECDONDS_PER_CM);
+        Logger.info('%s', diff / 2 / SoundSensor.MICROSECONDS_PER_CM);
       }
     });
   }

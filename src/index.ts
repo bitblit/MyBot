@@ -11,7 +11,6 @@ import { SoundSensor2 } from './sample/sound-sensor-2';
 import { Blink } from './sample/blink';
 
 async function tester(): Promise<void> {
-  //const b: SoundSensor2 = new SoundSensor2();
   const b: Blink = new Blink();
 
   await b.run();

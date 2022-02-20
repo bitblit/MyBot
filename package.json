@@ -30,7 +30,8 @@
     "test": "mocha -r ts-node/register test/**/*.ts",
     "apply-circle": "node dist/circleci/apply-circle-ci-env-variables-to-files src/static/build-properties.json",
     "lint": "eslint src/**/*.ts",
-    "lint-fix": "eslint --fix src/**/*.ts"
+    "lint-fix": "eslint --fix src/**/*.ts",
+    "go": "node dist/index.js"
   },
   "repository": {
     "type": "git",
